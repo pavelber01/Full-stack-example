@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(90deg, #cfecd0, #ffc5ca);
+    
+    .container {
+        width: 380px;
+        height: 480px;
+        position: relative;
+        margin: 6% auto;
+        background: #fff;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+     }
+
+    .container::-webkit-scrollbar {
+        width: 0;
+    }
+
+     .UserForm {
+        position: relative;
+        top: 25%;
+     }
+
+     .list {
+        padding: 0;
+        color: #777;
+        font-size: 18px;
+        font-weight: bolder;
+        margin-left: .5rem;
+
+        li {
+            margin: .5rem;
+            list-style: none;
+
+            .checked {
+                display: none;
+            }
+
+            .checked:checked ~ .label {
+                background: #08bb68;
+            }
+
+            .label {
+                display: inline-block;
+                width: 1rem;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                background: #ddd;
+                border-radius: 3px;
+                position: relative;
+                transition: .5s;
+                margin-right: .5rem;
+            }
+
+            .label::after {
+                content: "";
+                position: absolute;
+                width: .4rem;
+                height: .7rem;
+                border-right: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateZ(40deg);
+            }
+
+            ul {
+                padding: 0;
+            }
+        }
+    }
+}
